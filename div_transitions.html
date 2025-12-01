@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Types of Transitions</title>
+<style>
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #e66465, #9198e5);
+    font-family: Arial, sans-serif;
+  }
+
+  .box {
+    width: 150px;
+    height: 150px;
+    background-color: #ff9800;
+    border-radius: 10px;
+    opacity: 1;
+    transform: rotate(0deg);
+    position: relative;
+    left: 0;
+
+    /* Transition all properties smoothly */
+    transition: 
+      background-color 1s ease-in-out,
+      width 1s ease-in-out,
+      height 1s ease-in-out,
+      border-radius 1s ease-in-out,
+      transform 1s ease-in-out,
+      opacity 1s ease-in-out,
+      left 1s ease-in-out;
+  }
+
+  .box:hover {
+    background-color: #4caf50;   /* color change */
+    width: 250px;               /* size change */
+    height: 250px;
+    border-radius: 50%;         /* shape change */
+    transform: rotate(180deg);  /* rotation */
+    opacity: 0.6;               /* transparency */
+    left: 100px;                /* position move */
+  }
+
+  h2 {
+    position: absolute;
+    top: 30px;
+    color: white;
+  }
+</style>
+</head>
+<body>
+
+  <h2>Hover on the Box</h2>
+  <div class="box"></div>
+
+</body>
+</html>
